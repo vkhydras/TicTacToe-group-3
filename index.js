@@ -86,7 +86,7 @@ function checkWinner(){
          document.getElementById('X').style.color = 'white'
       }
    }  
-   //we also chek if the is no winning coombo and that is a draw
+   //we also chek if the is no winning combo and that is a draw
    if (draw && !roundWon && !options.includes(null)){
       document.getElementById("turn").innerHTML ="😥 DRAW"
       gameStatus = false
@@ -96,7 +96,7 @@ function checkWinner(){
 
 //function is called when the play again button is pressed and resets everything
 function restart(){
-   //we place the evnt listener again because it will have already been done due to --once : true
+   //we place the event listener again because it will have already been done due to --once : true
    cells.forEach(cell =>cell.addEventListener("click",clickHandle, {once: true}));
    options.fill(null)
    cells.forEach(cell =>{
