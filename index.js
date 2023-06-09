@@ -68,7 +68,7 @@ function checkWinner(){
          roundWon = true
          gameStatus = false
          if(options[c] == "X"){
-            document.getElementById("turn").innerHTML ="😀 " + "O"+ " WON!"
+            document.getElementById("turn").innerHTML =" 😀 " + "O"+ " WON!"
             document.getElementById("restart").style.display = "block"
             document.getElementById("turn").classList.add("winning-message")
          } else  {
