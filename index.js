@@ -28,3 +28,39 @@ function clickHandle(e){
    } 
    
 }
+function checkWinner(){
+   let roundWon = false
+   draw = true
+   //iterate over the winning combo and assing the valuse of each combo to [a,b,c] to be used for the optiions array
+   for (let i of winningCombo){
+      let [a,b,c] = i
+      // if (options[a]--checks if a is nul or not, if null it skips if not it cheks the other condition
+      if ( options[a] && (options[a] == options[b] && options[a] == options[c])){
+         roundWon = true
+         gameStatus = false
+         if(options[c] == "X"){
+            document.getElementById("turn").innerHTML ="😀 " + "O"+ " WON!"
+            document.getElementById("restart").style.display = "block"
+            document.getElementById("turn").classList.add("winning-message")
+         } else  {
+            document.getElementById("turn").innerHTML ="😀 "+ "X" + " WON!"
+            document.getElementById("restart").style.display = "block"
+            document.getElementById("turn").classList.add("winning-message")
+         }
+         draw = false
+         document.getElementById(a).classList.add("winning-row");
+         document.getElementById(b).classList.add("winning-row");
+         document.getElementById(c).classList.add("winning-row");
+         document.getElementById('O').style.backgroundColor = 'transparent'
+         document.getElementById('O').style.color = 'white'
+         document.getElementById('X').style.backgroundColor = 'transparent'
+         document.getElementById('X').style.color = 'white'
+      }
+   }  
+   //we also chek if the is no winning coombo and that is a draw
+   if (draw && !roundWon && !options.includes(null)){
+      document.getElementById("turn").innerHTML ="😥 DRAW"
+      gameStatus = false
+      document.getElementById("restart").style.display = "block"
+   }  
+}
