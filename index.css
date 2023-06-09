@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Josefin+Sans:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-image: url(tictacbg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+#turn {
+    font-family: 'Changa One', sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom left, turquoise, teal);
+    background-position: center;
+    width: 250px;
+    height: 80px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.turnContainer {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+    border-width: 10px;
+    border-radius: 5px;
+    background-position: center;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    font-weight: bold;
+}
+
+.turnContainer .tic-turns-x {
+    text-align: center;
+    border-right-width: 2px;
+    width: 200px;
+    border-color: #000;
+    font-size: 3.5rem;
+    border-style: solid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.turnContainer .tic-turns-o {
+    text-align: center;
+    border-left-width: 2px;
+    width: 200px;
+    border-color: #000;
+    font-size: 3.5rem;
+    border-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.board {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    border-width: 2px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.board .cell {
+    width: 144px;
+    height: 144px;
+    font-family: "Josefin Sans", sans-serif;
+    border-style: solid;
+    display: inline-flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #000;
+}
+
+button {
+    background-image: linear-gradient(to bottom left, teal, magenta);
+    font-family: 'Changa One', sans-serif;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 5px;
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        background-image: url(tictacbgfinaldark.png);
+    }
+
+    #turn {
+        color: #ddd;
+    }
+
+    .turnContainer {
+        color: #999;
+    }
+
+    .turnContainer .tic-turns-x {
+        color: #999;
+        border-color: #999;
+    }
+
+    .turnContainer .tic-turns-o {
+        color: #999;
+        border-color: #999;
+    }
+
+    .board .cell {
+        color: #999;
+        border-color: #999;
+    }
+
+    button {
+        color: #999;
+    }
+}
