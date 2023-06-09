@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    background: #252A34;
+    color: white;
+    font-family: 'Parmanent Maker',cursive;
+}
+.winning-row {
+  background-color:#08D9D6; 
+  animation-name: winning;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.winning-message{
+  animation-name:  winningMesage;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.turnContainer{
+  margin: 10px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 300px;
+    margin: auto;
+    margin-top: 8px;
+    text-align: center;
+    align-items: center;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+   border: 2px solid black;
+   font-size: 75px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 1s;
+}
+.cell:hover{
+  transition: 1s;
+  transform: scale(1.05,1.05);
+  background-color: rgba(154, 115, 17, 0.897);
+}
+.cell:active{
+  transform: rotate(20deg) ;
+  transition: 0.5s;
+
+}
+#turn{
+    font-size: 60px;
+}
+.turnBox{
+    width: 153px;
+    height: 55px;
+    border: 2px solid black;
+    font-size: 45PX;
+    text-align: center;
+}
+.turnContainer{
+    display: flex;
+
+}
+
+button{
+    background-color: rgba(252, 152, 2, 0.808);
+    width: 200px;
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 20px;
+    display: none;
+    transition: 1s;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+button:hover{
+    transform: scale(1.1,1.3);
+    background-color: black;
+    color:rgba(252, 152, 2, 0.808);
+    transition: 0.5s;
+    
+}
+button:active{
+  transform: rotate3d(20deg);
+}
+
+/*Edda na explain kiasi the purpose ya hii part iko chini eg *kuresize itoshe kwa smaller devices*/
+
+@media only screen and (max-width: 767px) {
+    .board {
+      width: 100vw;
+      max-width: 300px;
+    }
+  
+    .cell {
+      width: 96px;
+      height: 80px;
+      font-size: 60px;
+    }
+  
+    #turn {
+      font-size: 40px;
+    }
+  
+    .turnBox {
+      width: 120px;
+      height: 40px;
+      font-size: 30px;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+
+  @keyframes winning {
+    from {transform: scale(1,1) rotate(0deg);}
+    to {transform: scale(1.1,1.1) rotate(10deg);}
+  }
+  @keyframes winningMesage {
+    from{transform: scale(1,1);}
+    to{transform: scale(1.3,1.3);}
+  }
