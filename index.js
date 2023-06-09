@@ -6,6 +6,7 @@ let roundWon = false
 let restartBtn= document.getElementById('restart')
 restartBtn.addEventListener('click',restart)
 let draw = true
+
 let gameStatus = true;
 
 const winningCombo = [
@@ -56,6 +57,7 @@ function changePlayer(e){
       options[id] = turn
    }
 }
+
 function checkWinner(){
    let roundWon = false
    draw = true
@@ -92,6 +94,3 @@ function checkWinner(){
       document.getElementById("restart").style.display = "block"
    }  
 }
-
-
-
