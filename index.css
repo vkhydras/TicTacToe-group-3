@@ -94,8 +94,6 @@ button:active{
   transform: rotate3d(20deg);
 }
 
-/*Edda na explain kiasi the purpose ya hii part iko chini eg *kuresize itoshe kwa smaller devices*/
-
 @media only screen and (max-width: 767px) {
     .board {
       width: 100vw;
