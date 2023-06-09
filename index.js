@@ -64,3 +64,4 @@ function checkWinner(){
       document.getElementById("restart").style.display = "block"
    }  
 }
+
