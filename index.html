@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicTacToe</title>
-    <link rel="stylesheet" href="index.css">
+
+    <title>Tic Tac Toe</title>
     <link rel="icon" href="tictacicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="turn">X'S TURN</div>
+    <div id="turn">X'S TURN</div> 
     <div class="turnContainer">
-        <div id="X" class="turnBox">X</div>
-        <div id="O" class="turnBox">O</div>
+        <div class="tic-turns-x" id="X">X</div>
+        <div class="tic-turns-o" id="O">O</div>
     </div>
     <div class="board" id="board">
         <div class="cell" id="0"></div>
@@ -25,12 +26,11 @@
         <div class="cell" id="7"></div>
         <div class="cell" id="8"></div>
     </div>
-    
-    <div class="winningmessage">
+    <div class="winningmessage"> 
         <div data-wining-text></div>
-        <button id="restart">PLAY AGAIN</button>
-    </div>
-
+        <button class="button" id="restart">RESTART</button>
+        <button class="button" id="exit-game">EXIT</button>
+    </div> 
     <script src="index.js"></script>
 </body>
 </html>

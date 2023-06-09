@@ -1,14 +1,150 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Josefin+Sans:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-image: url(tictacbg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
     align-items: center;
     justify-items: center;
-    background: #252A34;
-    color: white;
-    font-family: 'Parmanent Maker',cursive;
 }
+
+#turn {
+    font-family: 'Changa One', sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom left, turquoise, teal);
+    background-position: center;
+    width: 250px;
+    height: 80px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.turnContainer {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px;
+    border-width: 10px;
+    border-radius: 5px;
+    background-position: center;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.turnContainer .tic-turns-x {
+    text-align: center;
+    border-right-width: 2px;
+    width: 200px;
+    border-color: #000;
+    font-size: 3.5rem;
+    border-style: solid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.turnContainer .tic-turns-o {
+    text-align: center;
+    border-left-width: 2px;
+    width: 200px;
+    border-color: #000;
+    font-size: 3.5rem;
+    border-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.board {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    border-width: 2px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.board .cell {
+    width: 144px;
+    height: 144px;
+    font-family: "Josefin Sans", sans-serif;
+    border-style: solid;
+    display: inline-flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #000;
+}
+
+button {
+    background-image: linear-gradient(to bottom left, teal, magenta);
+    font-family: 'Changa One', sans-serif;
+    display: none;
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 5px;
+    transition: 1s;
+    border: none;
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        background-image: url(tictacbgfinaldark.png);
+    }
+
+    #turn {
+        color: #ddd;
+    }
+
+    .turnContainer {
+        color: #999;
+    }
+
+    .turnContainer .tic-turns-x {
+        color: #999;
+        border-color: #999;
+    }
+
+    .turnContainer .tic-turns-o {
+        color: #999;
+        border-color: #999;
+    }
+
+    .board .cell {
+        color: #999;
+        border-color: #999;
+    }
+
+    button {
+        color: #999;
+    }
+}
+
 .winning-row {
   background-color:#08D9D6; 
   animation-name: winning;
@@ -21,9 +157,6 @@ body{
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-.turnContainer{
-  margin: 10px;
 }
 
 .board{
@@ -60,32 +193,10 @@ body{
 #turn{
     font-size: 60px;
 }
-.turnBox{
-    width: 153px;
-    height: 55px;
-    border: 2px solid black;
-    font-size: 45PX;
-    text-align: center;
-}
-.turnContainer{
-    display: flex;
 
-}
-
-button{
-    background-color: rgba(252, 152, 2, 0.808);
-    width: 200px;
-    padding: 10px;
-    font-size: 30px;
-    margin-top: 20px;
-    display: none;
-    transition: 1s;
-    border-radius: 10px;
-    border: solid 1px black;
-}
 button:hover{
     transform: scale(1.1,1.3);
-    background-color: black;
+    background-image: linear-gradient(to bottom left, magenta, teal);
     color:rgba(252, 152, 2, 0.808);
     transition: 0.5s;
     
@@ -128,3 +239,4 @@ button:active{
     from{transform: scale(1,1);}
     to{transform: scale(1.3,1.3);}
   }
+
